@@ -117,7 +117,7 @@ class MyTest extends KernelTestCase // or WebTestCase
         // manually send a message to your transport
         $this->messenger()->send(Envelope::wrap(new MyMessage()));
 
-        $queue = $this->messenger()->queued();
+        $queue = $this->messenger()->queue();
         $dispatched = $this->messenger()->dispatched();
         $acknowledged = $this->messenger()->acknowledged(); // messages successfully processed
         $rejected = $this->messenger()->rejected(); // messages not successfully processed
